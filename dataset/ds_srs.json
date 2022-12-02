@@ -1,0 +1,21 @@
+{
+	"name": "ds_srs",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_blb_source_folder",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"container": "mycontainer"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
