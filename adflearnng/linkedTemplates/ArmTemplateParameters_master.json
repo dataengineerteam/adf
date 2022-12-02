@@ -5,10 +5,7 @@
 		"factoryName": {
 			"value": "adflearnng"
 		},
-		"ls_blb_csv_connectionString": {
-			"value": ""
-		},
-		"ls_sql_connectionString": {
+		"ls_blb_source_folder_connectionString": {
 			"value": ""
 		},
 		"containerUri": {

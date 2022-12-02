@@ -7,13 +7,9 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "adflearnng"
 		},
-		"ls_blb_csv_connectionString": {
+		"ls_blb_source_folder_connectionString": {
 			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'ls_blb_csv'"
-		},
-		"ls_sql_connectionString": {
-			"type": "secureString",
-			"metadata": "Secure string for 'connectionString' of 'ls_sql'"
+			"metadata": "Secure string for 'connectionString' of 'ls_blb_source_folder'"
 		},
 		"containerUri": {
 			"type": "string",
@@ -42,11 +38,8 @@
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
 					},
-					"ls_blb_csv_connectionString": {
-						"value": "[parameters('ls_blb_csv_connectionString')]"
-					},
-					"ls_sql_connectionString": {
-						"value": "[parameters('ls_sql_connectionString')]"
+					"ls_blb_source_folder_connectionString": {
+						"value": "[parameters('ls_blb_source_folder_connectionString')]"
 					}
 				}
 			},
