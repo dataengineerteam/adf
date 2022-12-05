@@ -1,5 +1,5 @@
 {
-	"name": "move_files_from_one_folder_to_archieve_folder_and_delete_in_source_folder",
+	"name": "01 - move_files_from_one_folder_to_archieve_folder_and_delete_in_source_folder",
 	"properties": {
 		"activities": [
 			{
