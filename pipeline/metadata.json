@@ -1,5 +1,5 @@
 {
-	"name": "LoadMultipleCSVFilesToMultipleTablesAccordingToFileName",
+	"name": "metadata",
 	"properties": {
 		"activities": [
 			{
@@ -17,15 +17,19 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "ds_archieve",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filen": {
+								"value": "@variables('filename')",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"childItems"
 					],
 					"storeSettings": {
 						"type": "AzureBlobStorageReadSettings",
-						"recursive": true,
-						"modifiedDatetimeStart": "2022-12-14T00:00:00.698Z",
 						"enablePartitionDiscovery": false
 					},
 					"formatSettings": {
@@ -101,7 +105,7 @@
 									"referenceName": "ds_archieve",
 									"type": "DatasetReference",
 									"parameters": {
-										"filename": {
+										"filen": {
 											"value": "@item().name",
 											"type": "Expression"
 										}
@@ -119,6 +123,11 @@
 				}
 			}
 		],
+		"variables": {
+			"filename": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
