@@ -17,7 +17,13 @@
 				"typeProperties": {
 					"dataset": {
 						"referenceName": "ds_archieve",
-						"type": "DatasetReference"
+						"type": "DatasetReference",
+						"parameters": {
+							"filen": {
+								"value": "@variables('finename1')",
+								"type": "Expression"
+							}
+						}
 					},
 					"fieldList": [
 						"childItems"
@@ -114,7 +120,6 @@
 									"storeSettings": {
 										"type": "AzureBlobStorageReadSettings",
 										"recursive": true,
-										"wildcardFileName": "*",
 										"enablePartitionDiscovery": false
 									},
 									"formatSettings": {
@@ -141,7 +146,7 @@
 									"referenceName": "ds_archieve",
 									"type": "DatasetReference",
 									"parameters": {
-										"filename": {
+										"filen": {
 											"value": "@item().name",
 											"type": "Expression"
 										}
@@ -159,6 +164,11 @@
 				}
 			}
 		],
+		"variables": {
+			"finename1": {
+				"type": "String"
+			}
+		},
 		"annotations": []
 	}
 }
